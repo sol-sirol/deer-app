@@ -29,6 +29,8 @@ function App() {
             </p>
             <p>Акция действует для всех новых клиентов.</p>
           </div>
+        </AnimatedSection>
+        <AnimatedSection variant="section">
           <div className="promo">
             <h3>Бесплатная доставка от 3000 рублей</h3>
             <p>
@@ -36,6 +38,8 @@ function App() {
               доставку в подарок. Успейте воспользоваться выгодным предложением!
             </p>
           </div>
+        </AnimatedSection>
+        <AnimatedSection variant="section">
           <div className="promo">
             <h3>Скидка на все разливное пиво</h3>
             <p>Скидка 10% на все разливное пиво после 20:00 с ПН по ЧТ</p>
