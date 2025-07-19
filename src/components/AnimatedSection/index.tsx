@@ -3,27 +3,26 @@ import { ReactNode, useEffect, useRef } from "react";
 interface AnimatedSectionProps {
   variant?: "title" | "section" | "logo";
   children: ReactNode;
+  style?: React.CSSProperties;
 }
 
 const AnimatedSection = ({
   children,
   variant = "title",
+  style,
 }: AnimatedSectionProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const currentRef = sectionRef.current;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    });
 
     if (currentRef) {
       observer.observe(currentRef);
@@ -46,6 +45,7 @@ const AnimatedSection = ({
           logo: "fade-in-for-logo",
         }[variant]
       }
+      style={style}
     >
       {children}
     </div>

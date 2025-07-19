@@ -208,3 +208,58 @@ a:hover {
   opacity: 1;
   transform: translate(0);
 }
+
+.main-button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--bg);
+  font-size: 20px;
+  font-weight: 600;
+  transition: background-color 0.5s, color 0.1s, transform 0.2s, scale 0.2s;
+  border: none;
+}
+.main-button.tg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.main-button:hover {
+  background-color: #161616;
+  color: var(--bg);
+}
+
+.main-button:active {
+  transition: all 0.2s;
+  background-color: #414141;
+  transform: translateY(2px) scale(0.99);
+}
+
+.promo__button {
+  margin-top: 16px;
+}
+
+.beer-card:not(:last-child) {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f4c314;
+}
+
+.beer-card__name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.beer-card__name-hit {
+  /* color: #f4c314; */
+
+  background-color: #f4c314;
+  padding: 4px 16px;
+  border-radius: 16px;
+
+  font-size: 14px;
+}

@@ -1,5 +1,6 @@
 import logo from "./assets/logo.jpg";
 import AnimatedSection from "./components/AnimatedSection";
+import BeerList from "./components/BeerList";
 
 function App() {
   return (
@@ -20,17 +21,31 @@ function App() {
           <h2>Акции и скидки</h2>
         </AnimatedSection>
 
-        <AnimatedSection variant="section">
+        {/* <AnimatedSection variant="section">
           <div className="promo">
             <h3>Первое посещение – 20% скидка</h3>
             <p>
               Приходите в «Литровку» впервые и получите{" "}
               <strong>20% скидку</strong> на первую покупку.
             </p>
-            <p>Акция действует для всех новых клиентов.</p>
+            <p>Для получения купона пройдите авторизацию.</p>
+
+            <Button
+              className="promo__button"
+              text="Авторизоваться"
+              tg
+              onClick={() => {
+                window.open(
+                  `https://t.me/chaplygin_auth_bot?start=${Math.random()
+                    .toString(36)
+                    .substring(2, 10)}`,
+                  "_blank"
+                );
+              }}
+            />
           </div>
-        </AnimatedSection>
-        <AnimatedSection variant="section">
+        </AnimatedSection> */}
+        {/* <AnimatedSection variant="section">
           <div className="promo">
             <h3>Бесплатная доставка от 3000 рублей</h3>
             <p>
@@ -38,21 +53,29 @@ function App() {
               доставку в подарок. Успейте воспользоваться выгодным предложением!
             </p>
           </div>
+        </AnimatedSection> */}
+        <AnimatedSection variant="section">
+          <div className="promo">
+            <h3>Вайс Канцлер 1 + 1 = 3</h3>
+            <p>Попробуйте и убедитесь – математика может быть вкусной!</p>
+          </div>
         </AnimatedSection>
         <AnimatedSection variant="section">
           <div className="promo">
             <h3>Скидка на все разливное пиво</h3>
-            <p>Скидка 10% на все разливное пиво после 20:00 с ПН по ЧТ</p>
+            <p>Скидка 5% на все разливное пиво после c 10:00 до 18:00</p>
           </div>
         </AnimatedSection>
       </section>
+
+      <BeerList />
 
       <section>
         <AnimatedSection>
           <h2>Почему выбирают «Литровку»?</h2>
         </AnimatedSection>
 
-        <AnimatedSection variant="section">
+        <AnimatedSection variant="section" style={{ maxWidth: 700 }}>
           <ul>
             <li>
               <strong>Низкие цены</strong> – лучшее соотношение качества и
@@ -63,17 +86,17 @@ function App() {
               застаивается
             </li>
             <li>
-              <strong>Удобное расположение</strong> – центр Чаплыгина, рядом с
-              [ориентир]
+              <strong>Удобное расположение</strong> – центр Чаплыгина, в конце
+              магазина "Пятерочка" на Советской д. 39 (бывший пролетарский)
             </li>
-            <li>
+            {/* <li>
               <strong>Акции и скидки</strong> – 20% за первое посещение!
-            </li>
+            </li> */}
           </ul>
         </AnimatedSection>
       </section>
 
-      <section>
+      {/* <section>
         <AnimatedSection>
           <h2>Наше разливное пиво</h2>
         </AnimatedSection>
@@ -88,24 +111,24 @@ function App() {
           </ul>
           <p>Цены от **XX рублей за литр** – уточняйте в ассортименте!</p>
         </AnimatedSection>
-      </section>
+      </section> */}
 
       <section>
         <AnimatedSection>
           <h2>Как нас найти?</h2>
         </AnimatedSection>
 
-        <AnimatedSection variant="section">
+        <AnimatedSection variant="section" style={{ maxWidth: 700 }}>
           <p>
             Мы находимся в <strong>центре Чаплыгина</strong> по адресу:{" "}
-            <strong>[улица, дом]</strong>.
+            <strong>
+              ул. Советская, д. 39 (бывший Пролетарский), в здании "Пятерочки"
+            </strong>
+            .
           </p>
+          <p>Рядом с парк и отель "Плаза", напротив здание полиции.</p>
           <p>
-            Рядом с [ориентир, например: «рядом с парком Победы» или «через
-            дорогу от ТЦ»].
-          </p>
-          <p>
-            Работаем <strong>ежедневно с 12:00 до 23:00</strong>. Ждем вас!
+            Работаем <strong>ежедневно с 10:00 до 22:00</strong>. Ждем вас!
           </p>
         </AnimatedSection>
       </section>
@@ -113,10 +136,10 @@ function App() {
       <footer>
         <p>
           ™ 2025 «Литровка» – магазин разливного пива в Чаплыгине. Работаем с
-          12:00 до 23:00.
+          10:00 до 22:00.
         </p>
         <p>
-          Телефон: <a href="tel:+7XXX-XXX-XX-XX">+7XXX-XXX-XX-XX</a> (звоните
+          Телефон: <a href="tel:+789092192777">+7 (909) 219-27-77</a> (звоните
           или пишите в WhatsApp).
         </p>
       </footer>
